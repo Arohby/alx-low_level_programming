@@ -5,7 +5,7 @@
  * Description: print _purchar followed by a new line
  * Return: 0 (success)
  */
-int main(void);
+int main(void)
 {
 	_putchar('_');
 	_putchar('p');
