@@ -1,32 +1,26 @@
 #include <stdio.h>
-
 /**
- * main - Entry point (code not working)
- *
- * Description: print the first 98 fibonacci numbers
- * without using long long, malloc, pointers, arrays or structures
- *
- * Return: 0 (success)
+ * main - main block
+ * Description: computes and prints the sum of all the multiples of 3 or
+ * 5 below 1024 (excluded), followed by a new line
+ * Return: 0
  */
 int main(void)
 {
-	long double prev, curr, temp;
-	int i;
+	int i = 0;
+	unsigned long int a = 0, b = 1, next = 0;
 
-	prev = 1;
-	curr = 2;
-	i = 1;
-	printf("%.0Lf, %.0Lf, ", prev, curr);
-	while (i <= 96)
+	while (i < 98)
 	{
-		temp = curr;
-		curr += prev;
-		prev = temp;
-		printf("%.0Lf", curr);
-		if (i != 96)
+		next = a + b;
+		a = b;
+		b = next;
+		printf("%lu", next);
+
+		if (i < 97)
 			printf(", ");
-		++i;
+		i++;
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
