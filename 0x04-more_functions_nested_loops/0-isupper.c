@@ -1,4 +1,4 @@
-l#include <stdio.h>
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -12,4 +12,4 @@ int _isupper(int c)
 		return (1);
 	else
 		return (0);
-}
+}}
