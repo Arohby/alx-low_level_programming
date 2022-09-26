@@ -2,23 +2,19 @@
 #include <stdio.h>
 
 /**
- * print_diagsums - prints the sum of the two diaginal of a square
- * matrix of integers
- *
- * @a: pointer to matrix of integers
- * @size: size of matrix
- *
+ * print_diagsums -  prints sums
+ * @a: a pointer
+ * @size: size
  */
 void print_diagsums(int *a, int size)
 {
-	int sum1, sum2, x, y, z;
+	int i, sum1 = 0, sum2 = 0;
 
-	y = 0; z = size - 1;
-	sum1 = sum2 = 0;
-	for (x = 0; x < size; x++, y += size + 1, z += size - 1)
+	for (i = 0; i < size; i++)
 	{
-		sum1 += *(a + y);
-		sum2 += *(a + z);
+		sum1 += *(a + (size * i + i));
+		sum2 += *(a + (size * i + size - 1 - i));
 	}
-	printf("%d, %d\n", sum1, sum2);
+	printf("%d, ", sum1);
+	printf("%d\n", sum2);
 }
